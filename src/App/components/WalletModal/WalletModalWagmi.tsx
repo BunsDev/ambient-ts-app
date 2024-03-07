@@ -14,7 +14,7 @@ import { CircleLoaderFailed } from '../../../components/Global/LoadingAnimations
 import WaitingConfirmation from '../../../components/Global/WaitingConfirmation/WaitingConfirmation';
 import { IS_LOCAL_ENV } from '../../../ambient-utils/constants';
 // import GateWallet from './GateWallet';
-import { useTermsAgreed } from '../../hooks/useTermsAgreed';
+// import { useTermsAgreed } from '../../hooks/useTermsAgreed';
 import { AppStateContext } from '../../../contexts/AppStateContext';
 import { UserDataContext } from '../../../contexts/UserDataContext';
 

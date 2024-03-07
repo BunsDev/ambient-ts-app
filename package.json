@@ -12,6 +12,9 @@
         "@material-ui/core": "^4.12.4",
         "@mui/material": "^5.8.2",
         "@types/react-color": "^3.0.7",
+        "@web3-react/core": "6.1.9",
+        "@web3-react/injected-connector": "6.0.7",
+        "@web3modal/ethers": "4.0.0",
         "babel-plugin-styled-components": "^2.1.4",
         "d3": "^7.4.4",
         "d3fc": "^15.2.4",
@@ -40,7 +43,8 @@
         "socket.io-client": "^4.5.1",
         "styled-components": "^6.0.3",
         "wagmi": "^0.12.12",
-        "web-vitals": "^2.1.0"
+        "web-vitals": "^2.1.0",
+        "web3modal": "1.9.7"
     },
     "scripts": {
         "start": "node -v | grep -q \"v16\" && yarn run start:regular || yarn run start:legacy",
