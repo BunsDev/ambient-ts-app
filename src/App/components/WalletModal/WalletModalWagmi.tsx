@@ -13,7 +13,7 @@ import rabbyLogo from '../../../assets/images/logos/rabby_logo.svg';
 import { CircleLoaderFailed } from '../../../components/Global/LoadingAnimations/CircleLoader/CircleLoader';
 import WaitingConfirmation from '../../../components/Global/WaitingConfirmation/WaitingConfirmation';
 import { IS_LOCAL_ENV } from '../../../ambient-utils/constants';
-import GateWallet from './GateWallet';
+// import GateWallet from './GateWallet';
 import { useTermsAgreed } from '../../hooks/useTermsAgreed';
 import { AppStateContext } from '../../../contexts/AppStateContext';
 import { UserDataContext } from '../../../contexts/UserDataContext';
@@ -211,21 +211,21 @@ export default function WalletModalWagmi() {
         }
     }, [page, delayForHelpTextElapsed]);
 
-    const activeTitle = useMemo(() => {
-        switch (page) {
-            case 'wallets':
-                return 'Choose a Wallet';
-            case 'metamaskPending':
-                return 'Waiting for Wallet';
-            case 'metamaskError':
-                return 'Wallet Connection Error';
-            case 'magicLogin':
-            case 'magicLoginPending':
-                return 'Log In With Email';
-            default:
-                'Choose a Wallet';
-        }
-    }, [page]);
+    // const activeTitle = useMemo(() => {
+    //     switch (page) {
+    //         case 'wallets':
+    //             return 'Choose a Wallet';
+    //         case 'metamaskPending':
+    //             return 'Waiting for Wallet';
+    //         case 'metamaskError':
+    //             return 'Wallet Connection Error';
+    //         case 'magicLogin':
+    //         case 'magicLoginPending':
+    //             return 'Log In With Email';
+    //         default:
+    //             'Choose a Wallet';
+    //     }
+    // }, [page]);
 
     const showBackArrow = useMemo(() => {
         switch (page) {
@@ -251,20 +251,22 @@ export default function WalletModalWagmi() {
         }
     }, [page]);
 
-    const [recordAgreed, hasAgreedTerms, termUrls] = useTermsAgreed();
+    // const [recordAgreed, hasAgreedTerms, termUrls] = useTermsAgreed();
 
     return (
         <Modal
             onClose={closeModal}
             handleBack={clickBackArrow}
             showBackButton={showBackArrow}
-            title={!hasAgreedTerms ? 'Welcome' : activeTitle}
+            title={'Select Wallet'}
+            // title={!hasAgreedTerms ? 'Welcome' : activeTitle}
         >
-            {!hasAgreedTerms ? (
+            {activeContent}
+            {/* {!hasAgreedTerms ? (
                 <GateWallet recordAgreed={recordAgreed} termUrls={termUrls} />
             ) : (
                 activeContent
-            )}
+            )} */}
         </Modal>
     );
 }
