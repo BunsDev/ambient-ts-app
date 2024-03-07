@@ -91,7 +91,7 @@ if (!doReload) {
             new InjectedConnector({
                 chains,
                 options: {
-                    name: 'Other (Injected) Wallet',
+                    name: 'Wallet (Injected)',
                     shimDisconnect: true,
                 },
             }),

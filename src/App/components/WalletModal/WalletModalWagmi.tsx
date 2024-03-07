@@ -96,14 +96,14 @@ export default function WalletModalWagmi() {
             {connectors.map((connector) => (
                 <WalletButton
                     title={`${connector.name} ${
-                        !connector.ready ? ' (unavailable)' : ''
+                        '' // !connector.ready ? ' (unavailable)' : ''
                     }  ${
                         connectIsLoading &&
                         connector.id === pendingConnector?.id
                             ? ' (connecting)'
                             : ''
                     }`}
-                    disabled={!connector.ready}
+                    // disabled={!connector.ready}
                     key={connector.id + '|' + connector.name} // Join both to ensure uniqueness
                     action={() => {
                         connectUser({ connector });
